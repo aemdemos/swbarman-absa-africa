@@ -11,17 +11,17 @@
           "id": "1-1",
           "blocks": [
             {
-              "id": "box-id--855297627",
+              "id": "box-id-2039097791",
               "x": 0,
               "y": 0,
               "width": 2899,
-              "height": 69,
-              "xpath": "/html[1]/body[1]/header[1]/nav[1]",
+              "height": 901,
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[2]",
               "layout": {
                 "numCols": 0,
                 "numRows": 0
               },
-              "color": "rgb(148, 0, 211)",
+              "color": "rgba(75, 0, 130, 0.4)",
               "mapping": "header",
               "customBlockName": "header"
             }
@@ -37,21 +37,6 @@
         {
           "id": "2-1",
           "blocks": [
-            {
-              "id": "box-id-2039097791",
-              "x": 0,
-              "y": 0,
-              "width": 2899,
-              "height": 901,
-              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[2]",
-              "layout": {
-                "numCols": 0,
-                "numRows": 0
-              },
-              "color": "rgba(75, 0, 130, 0.4)",
-              "mapping": "hero",
-              "customBlockName": "ai-hero"
-            },
             {
               "id": "box-id--1102402209",
               "x": 0,
@@ -201,7 +186,7 @@
                 }
               ],
               "color": "rgb(255, 127, 0)",
-              "mapping": "columns",
+              "mapping": "defaultContent",
               "customBlockName": "ai-footer"
             }
           ],
