@@ -23,13 +23,13 @@
 
 /* Styling for each news item */
 .ai-latest-news-wrapper h3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: black; /* Ensure headlines are black */
   font-size: 1.2em; /* Adjust the font size */
   font-weight: 700; /* Ensure bold headlines */
   margin: 0; /* Remove default margins */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Styling for the date */
@@ -43,21 +43,13 @@
   margin: 5px 0; /* Reduce margin to reduce spacing */
 }
 
-/* Container for the "Read more" link */
+/* Container for the "Read more" link and arrow */
 .ai-latest-news-wrapper .button-container {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px; /* Reduce margin to reduce spacing */
-}
-
-/* Aligning the arrow to the right */
-.ai-latest-news-wrapper h3::after {
-  content: '>';
-  margin-left: 10px; /* Adjust margin for better alignment */
-  color: red;
-  font-size: 1.5em;
-  align-self: center; /* Ensure vertical alignment with the title */
+  margin-top: 10px; /* Adjusted margin for better spacing */
 }
 
 /* Ensure the 'Read more' link is styled consistently */
@@ -98,20 +90,22 @@
 .ai-latest-news-wrapper h3 + p,
 .ai-latest-news-wrapper h3 + p + p,
 .ai-latest-news-wrapper .button-container {
-  display: flex;
-  flex-direction: column; /* Ensure vertical stacking within news items */
+  display: block; /* Ensure vertical stacking within news items */
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-/* Ensure the arrow aligns with the title */
-.ai-latest-news-wrapper h3 {
+/* Aligning the arrow in the button container */
+.ai-latest-news-wrapper .button-container {
   position: relative;
 }
 
-.ai-latest-news-wrapper h3::after {
+.ai-latest-news-wrapper .button-container::after {
+  content: '>';
   position: absolute;
-  right: 0;
+  right: -20px; /* Adjust this value as needed for alignment */
   top: 50%;
   transform: translateY(-50%);
+  color: red;
+  font-size: 1.5em;
 }
