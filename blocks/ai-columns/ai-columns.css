@@ -1,0 +1,59 @@
+
+.ai-columns-wrapper .ai-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  width: 100%;
+}
+
+.ai-columns-wrapper .ai-columns > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  width: 100%;
+}
+
+.ai-columns-wrapper .ai-columns-img-col {
+  flex: 1;
+  max-width: 50%;
+}
+
+.ai-columns-wrapper .ai-columns-img-col picture,
+.ai-columns-wrapper .ai-columns-img-col img {
+  width: 100%;
+  height: auto;
+}
+
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 40px; /* Add padding to the left for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text block vertically */
+}
+
+.ai-columns-wrapper #financial-literacy {
+  display: inline-block;
+  border-bottom: 2px solid red;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  width: fit-content;
+}
+
+.ai-columns-wrapper .button-container .button {
+  background: none;
+  border: none;
+  color: red;
+  text-decoration: none;
+  padding: 0;
+  margin-top: 20px; /* Increase margin to match original spacing */
+}
+
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) h6,
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) h4,
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) p {
+  margin: 0;
+  margin-bottom: 20px; /* Increase spacing between elements */
+}
