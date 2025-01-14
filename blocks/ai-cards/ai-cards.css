@@ -2,19 +2,19 @@
 .ai-cards-wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .ai-cards.block {
-  width: 90%;
+  width: 100%;
 }
 
 .ai-cards > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Style for the first <li> to display the heading */
@@ -22,7 +22,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-start; /* Align heading to the left */
-  margin-bottom: 40px; /* Increase spacing between heading and cards */
+  margin-bottom: 20px; /* Adjust spacing between heading and cards */
 }
 
 /* Style the second level div inside the first li to take full width */
@@ -35,15 +35,17 @@
   display: flex;
   flex-direction: row; /* Ensure cards are side by side */
   justify-content: space-between;
-  flex-wrap: nowrap; /* Prevent wrapping to ensure proper alignment */
   width: 100%;
+  gap: 20px; /* Adjust gap for spacing between cards */
 }
 
 /* Style for each content card (div inside the second li) */
 .ai-cards > ul > li:not(:first-child) > div {
-  flex: 1 1 calc(33.333% - 16px);
+  flex: 1;
   box-sizing: border-box;
-  margin: 0 8px;
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-direction: column; /* Stack the content within each card */
 }
 
 /* Style for the image inside each card */
@@ -61,18 +63,17 @@
 /* Ensure each card body takes up full width of its parent */
 .ai-cards .ai-cards-card-body {
   width: 100%;
-  margin: 16px 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Ensure text content is evenly distributed */
+  justify-content: flex-start; /* Align text content at the top */
 }
 
 /* Styling for the text content within the cards */
 .ai-cards .ai-cards-card-body h5 {
   font-size: 1rem;
   margin: 10px 0;
-  flex-grow: 1; /* Ensure consistent spacing */
+  flex-grow: 0; /* Ensure consistent spacing */
 }
 
 /* Styling for the "Tell me more" link */
@@ -89,4 +90,15 @@
 
 .ai-cards .button-container .button::after {
   content: " \2192";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-cards > ul > li:not(:first-child) {
+    flex-direction: column;
+  }
+
+  .ai-cards > ul > li:not(:first-child) > div {
+    margin: 10px 0;
+  }
 }

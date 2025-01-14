@@ -28,8 +28,16 @@
   font-weight: 700; /* Ensure bold headlines */
   margin: 0; /* Remove default margins */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+/* Arrow Icon Styling */
+.ai-latest-news-wrapper h3::after {
+  content: '>';
+  margin-left: 10px;
+  color: red;
+  font-size: 1.5em;
 }
 
 /* Styling for the date */
@@ -43,12 +51,8 @@
   margin: 5px 0; /* Reduce margin to reduce spacing */
 }
 
-/* Container for the "Read more" link and arrow */
+/* Container for the "Read more" link */
 .ai-latest-news-wrapper .button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 10px; /* Adjusted margin for better spacing */
 }
 
@@ -93,19 +97,4 @@
   display: block; /* Ensure vertical stacking within news items */
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-/* Aligning the arrow in the button container */
-.ai-latest-news-wrapper .button-container {
-  position: relative;
-}
-
-.ai-latest-news-wrapper .button-container::after {
-  content: '>';
-  position: absolute;
-  right: -20px; /* Adjust this value as needed for alignment */
-  top: 50%;
-  transform: translateY(-50%);
-  color: red;
-  font-size: 1.5em;
 }

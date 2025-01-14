@@ -4,6 +4,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    position: relative;
 }
 
 .header-wrapper .nav-wrapper {
@@ -13,7 +14,7 @@
     position: fixed;
     z-index: 2;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
     padding: 10px 20px;
 }
 
@@ -27,11 +28,6 @@ header nav {
     font-family: var(--body-font-family);
 }
 
-header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-}
-
 header .nav-brand {
     display: flex;
     align-items: center;
@@ -40,50 +36,42 @@ header .nav-brand {
 }
 
 header .nav-brand img {
-    width: 24px; /* Adjust size to be smaller */
-    height: 24px; /* Maintain aspect ratio */
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     border-radius: 50%;
 }
 
-header .nav-brand::after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 24px;
-    background-color: #ddd;
-    margin-left: 20px;
-}
-
-header nav .nav-sections {
+header .nav-sections {
     display: flex;
     align-items: center;
     flex: 1;
     order: 2;
+    justify-content: center;
 }
 
-header nav .nav-sections ul {
+header .nav-sections ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header nav .nav-sections li {
+header .nav-sections li {
     margin-right: 20px;
     position: relative;
 }
 
-header nav .nav-sections a {
+header .nav-sections a {
     color: #000;
     text-decoration: none;
 }
 
-header nav .nav-sections li > ul {
+header .nav-sections li > ul {
     display: none;
 }
 
-header nav .nav-sections li:hover > ul {
+header .nav-sections li:hover > ul {
     display: block;
     position: absolute;
     top: 100%;
@@ -94,47 +82,162 @@ header nav .nav-sections li:hover > ul {
     list-style: none;
 }
 
-header nav .nav-sections li > ul li {
+header .nav-sections li > ul li {
     padding: 5px 0;
 }
 
-header nav .nav-tools {
+header .nav-tools {
     display: flex;
     align-items: center;
     margin-left: 20px;
     order: 3;
 }
 
-header nav .nav-tools p {
+header .nav-tools p {
     margin: 0 10px;
     display: flex;
     align-items: center;
 }
 
-header nav .nav-tools p:first-child {
+header .nav-tools p:first-child {
     display: flex;
     align-items: center;
 }
 
-header nav .nav-tools p:first-child::before {
+header .nav-tools p:first-child::before {
     content: '\1F50D';
     margin-right: 5px;
     font-size: 12px;
 }
 
-header nav .nav-tools p:last-child {
+header .nav-tools p:last-child {
     display: flex;
     align-items: center;
 }
 
-header nav .nav-tools p:last-child::before {
+header .nav-tools p:last-child::before {
     content: '|';
     margin-right: 5px;
     color: #000;
 }
 
-header nav .nav-tools p:last-child::after {
+header .nav-tools p:last-child::after {
     content: '\25BC';
     margin-left: 5px;
     font-size: 10px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.circle-element {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
+}
+
+header nav .nav-hamburger {
+    display: none;
+    visibility: hidden;
+}
+
+.header-wrapper .nav-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    max-width: 1264px;
+}
+
+header {
+    display: flex;
+}
+
+.header-wrapper::after {
+    content: "";
+    display: block;
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.circle-element {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
 }

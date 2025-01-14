@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
   width: 100%;
 }
 
 .ai-columns-wrapper .ai-columns > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Ensure children are side by side */
   width: 100%;
 }
 
@@ -28,27 +28,29 @@
   flex: 1;
   max-width: 50%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column; /* Stack text elements vertically */
+  align-items: flex-start; /* Align text elements to the start */
+  justify-content: flex-start; /* Align text block to the top */
   padding-left: 20px; /* Adjust padding for better alignment */
-  align-items: center; /* Ensure text block is vertically centered */
 }
 
 .ai-columns-wrapper #financial-literacy {
   display: block;
-  border-top: 3px solid red;
+  border-top: 3px solid red; /* Add thin horizontal line */
   padding-top: 5px;
-  margin-bottom: 10px; /* Adjust margin to match original spacing */
+  margin-bottom: 15px; /* Adjust margin to match original spacing */
   width: fit-content;
 }
 
 .ai-columns-wrapper .button-container .button {
   background: none;
   border: none;
-  color: red;
+  color: red; /* Change to red text */
   text-decoration: none;
   padding: 0;
   margin-top: 10px;
+  border-radius: 0; /* Remove rounded corners */
+  align-self: flex-start; /* Align the button to the start */
 }
 
 .ai-columns-wrapper .ai-columns > div > div:nth-child(2) h6,
@@ -58,8 +60,23 @@
   margin-bottom: 10px; /* Ensure consistent spacing between elements */
 }
 
-.ai-columns-wrapper .ai-columns > div > div:nth-child(2) {
-  align-items: flex-start; /* Align text block to the start */
-  flex-direction: column; /* Ensure text elements stack vertically */
-  justify-content: center; /* Ensure text block is vertically centered */
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) h4 {
+  margin-top: 5px; /* Adjust margin for closer match */
+}
+
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) p:last-of-type {
+  margin-bottom: 0; /* Remove margin-bottom from last paragraph */
+}
+
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) p {
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.ai-columns-wrapper .button-container {
+  margin-top: 20px; /* Adjust button container margin for better alignment */
+  align-self: flex-start; /* Ensure the button container is aligned to the start */
+}
+
+.ai-columns-wrapper .ai-columns > div > div:nth-child(2) p {
+  max-width: 90%; /* Ensure the paragraph width is limited for better readability */
 }
